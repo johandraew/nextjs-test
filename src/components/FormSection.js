@@ -19,7 +19,9 @@ export default class FormSection extends React.Component {
         const formHoneypotInputId = formId + '-honeypot';
         const formHoneypotLabelId = formId + '-honeypot-label';
         const formHoneypotName = formId + '-bot-field';
+        const googleform = process.env.GOOGLE_FORM;
 
+        console.log(process.env.GOOGLE_FORM)
         return (
             <section id={sectionId} className="section section--form">
                 <div className="container container--lg">
@@ -39,7 +41,7 @@ export default class FormSection extends React.Component {
                             <form
                                 name={formId}
                                 id={formId}
-                                {...(formAction ? ({ action: formAction }) : null)}
+                                action={googleform}
                                 method="POST"
                                 data-netlify="true"
                                 data-netlify-honeypot={formHoneypotName}
