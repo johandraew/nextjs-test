@@ -19,9 +19,9 @@ export default class FormSection extends React.Component {
         const formHoneypotInputId = formId + '-honeypot';
         const formHoneypotLabelId = formId + '-honeypot-label';
         const formHoneypotName = formId + '-bot-field';
-        const googleform = process.env.GOOGLE_FORM;
+        const googleform = process.env.SECRET_API_KEY;
 
-        console.log(process.env.GOOGLE_FORM)
+        console.log(process.env.SECRET_API_KEY)
         return (
             <section id={sectionId} className="section section--form">
                 <div className="container container--lg">
