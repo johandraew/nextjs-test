@@ -22,6 +22,8 @@ export default class FormSection extends React.Component {
         const googleform = process.env.SECRET_API_KEY;
 
         console.log(process.env.SECRET_API_KEY)
+        console.log(process.env.NEXT_PUBLIC_URL_API)
+        console.log(process.env.GOOGLE_FORM)
         return (
             <section id={sectionId} className="section section--form">
                 <div className="container container--lg">
@@ -41,7 +43,7 @@ export default class FormSection extends React.Component {
                             <form
                                 name={formId}
                                 id={formId}
-                                action={googleform}
+                                action={process.env.NEXT_PUBLIC_URL_API}
                                 method="POST"
                                 data-netlify="true"
                                 data-netlify-honeypot={formHoneypotName}
